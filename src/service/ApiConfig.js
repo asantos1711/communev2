@@ -57,7 +57,7 @@ const site = {
 //laandara
 //https://apiandara.commune.com.mx/api/v1
 const httpInstance = axios.create({
-  baseURL: api.lausana,
+  baseURL: api.madrid,
 });
 
 httpInstance.interceptors.response.use(null, (error) => {
@@ -67,7 +67,7 @@ httpInstance.interceptors.response.use(null, (error) => {
     error.response.status < 500;
   if (error.response.status === 403) {
     window.localStorage.setItem("authData", null);
-    window.location.href = site.lausana;
+    window.location.href = site.madrid;
   }
   if (expectedError) {
     //console.log(error.response.status)
