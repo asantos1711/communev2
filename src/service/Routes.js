@@ -514,3 +514,9 @@ export const ORDENCOMPRA_GET = "/ordencompra/all";
 export const ORDENCOMPRA_GET_BY_ID = "/ordencompra/get";
 export const ORDENCOMPRA_SAVE = "/ordencompra/save";
 export const ORDENCOMPRA_CANCELARORDEN = "/ordencompra/cancelarOrden";
+
+//intereses moratorios v2
+export const I_MORATORIOS_LIST = "/imoratorios/list";
+export const I_MORATORIOS_GET = "/imoratorios/get";
+export const I_MORATORIOS_SAVE_MASIVO = "/imoratorios/masivo";
+export const I_MORATORIOS_SAVE = "/imoratorios/save";

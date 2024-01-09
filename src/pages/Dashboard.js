@@ -121,6 +121,7 @@ import Proveedor from "./proveedor/Proveedor";
 import Articulo from "./articulo/Articulo";
 import OrdenCompra from "./ordencompra/OrdenCompra";
 import DescuentoCancelaciones from "./reportes/DescuentoCancelaciones";
+import InteresesMoratorios from "./interesesmoratorios/InteresesMoratorios";
 
 export default function Dashboard() {
   const { auth } = useContext(authContext);
@@ -249,6 +250,9 @@ export default function Dashboard() {
                   </Route>
                   <Route path={`${url}/ordenescompra`}>
                     <OrdenCompra />
+                  </Route>
+                  <Route path={`${url}/interesesmoratorios`}>
+                    <InteresesMoratorios />
                   </Route>
                 </>
               )}

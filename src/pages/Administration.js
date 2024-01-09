@@ -15,6 +15,7 @@ import NewsLetterComponent from "../components/newsletter/NewsLetterComponent";
 import AccesoComponent from "../components/acceso/AccesoComponent";
 import EmailTemplateComponent from "../components/emailtemplate/EmailTemplateComponent";
 import ProveedorComponentt from "../components/proveedor/ProveedorComponent";
+import MoratoriosComponent from "../components/moratorios/MoratoriosComponent";
 
 export default function Administration({ auth }) {
   return (
@@ -64,6 +65,9 @@ export default function Administration({ auth }) {
             </Col>        */}
       <Col xs lg="4" className="mb-4">
         <ProveedorComponentt />
+      </Col>
+      <Col xs lg="4" className="mb-4">
+        <MoratoriosComponent />
       </Col>
     </Row>
   );
