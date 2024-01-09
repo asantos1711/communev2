@@ -6,10 +6,10 @@ import { Link, Route, useRouteMatch } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 import { ToastContainer } from "react-toastify";
 import { authContext } from "../../context/AuthContext";
-import InteresesMoratoriosValue from "./InteresesMoratoriosValue";
-import InteresesMoratoriosList from "./InteresesMoratoriosList";
+import PenalizacionesValue from "./PenalizacionesValue";
+import PenalizacionesList from "./PenalizacionesList";
 
-export default function InteresesMoratorios() {
+export default function Penalizaciones() {
   let { path, url } = useRouteMatch();
   const { auth } = useContext(authContext);
   const [isEditing, setIsEditing] = useState(false);
@@ -18,14 +18,14 @@ export default function InteresesMoratorios() {
     setIsEditing(valor);
   };
 
-  return ( 
+  return (
     <Card className="shadow">
       <ToastContainer />
       <Card.Body>
         <Switch>
           <Route path={path} exact>
             <Card.Title>
-              Intereses moratorios{" "}
+              Penalizaciones{" "}
               <small>
                 <Link
                   to={`${url}/value`}
@@ -36,7 +36,7 @@ export default function InteresesMoratorios() {
               </small>
             </Card.Title>
             <Dropdown.Divider />
-            <InteresesMoratoriosList
+            <PenalizacionesList
               path={path}
               auth={auth}
               handleIsEditing={handleIsEditing}
@@ -44,10 +44,10 @@ export default function InteresesMoratorios() {
           </Route>
           <Route exact path={`${path}/value`}>
             <Card.Title>{`${
-              isEditing ? "Editar" : "Nuevo"
-            } interés moratorio`}</Card.Title>
+              isEditing ? "Editar" : "Nueva"
+            } Penalización`}</Card.Title>
             <Dropdown.Divider />
-            <InteresesMoratoriosValue auth={auth} />
+            <PenalizacionesValue auth={auth} />
           </Route>
         </Switch>
       </Card.Body>
