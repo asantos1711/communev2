@@ -63,9 +63,7 @@ export default function InteresesMoratoriosValue({ auth }) {
     }
   }, []);
 
-  const schemaValidate = Yup.object().shape({
-    // porcentaje: Yup.number().required("Campo Requerido"),
-  });
+  const schemaValidate = Yup.object().shape({});
 
   return (
     <div>
